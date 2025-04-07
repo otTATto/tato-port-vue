@@ -1,0 +1,31 @@
+# main ブランチに push されたら develop ブランチに自動でマージする
+
+name: Auto Merge main -> develop
+
+# トリガー: main ブランチに push されたとき
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Merge main into develop
+        run: |
+          git checkout develop
+          git merge origin/main --no-edit --allow-unrelated-histories
+          git push origin develop
