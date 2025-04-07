@@ -1,8 +1,10 @@
 <template>
   <div>
-    <small>
-      © たと・2025
-    </small>
+    <div class="text-center">
+      <small>
+        © たと・2025
+      </small>
+    </div>
   </div>
 </template>
 
