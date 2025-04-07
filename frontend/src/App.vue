@@ -1,12 +1,21 @@
 <template>
   <div>
-    <h1>Hello World!</h1>
+    <HeaderComp />
+    <router-view />
+    <FooterComp />
   </div>
 </template>
 
 <script setup lang="ts"> 
+import HeaderComp from './components/HeaderComp.vue'
+import FooterComp from './components/FooterComp.vue'
+
 defineOptions({
-  name: 'App'
+  name: 'App',
+  components: {
+    HeaderComp, 
+    FooterComp,
+  }
 })
 </script>
 
