@@ -1,9 +1,13 @@
 <template>
   <div>
     <LoadingPage v-if="showLoading" />
-    <div v-else class="fade-in-with-blur">
+    <div v-else class="fade-in-with-blur m-4">
       <HeaderComp />
-      <router-view />
+      <div class="rounded-lg border-2 border-TatoGreen">
+        <transition class="fade-in-with-blur">
+          <router-view />
+        </transition>
+      </div>
       <FooterComp />
     </div>
   </div>

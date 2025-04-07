@@ -1,12 +1,12 @@
 <template>
     <div>
-        <img src="../img/icon/tato-comet.webp" alt="Logo" class="my-5 w-4/5 md:w-1/2 lg:w-1/3"/>
+        
     </div>
 </template>
 
 <script setup lang="ts">
 defineOptions({
-  name: 'TopPage'
+  name: 'WorksTop'
 })
 </script>
 
