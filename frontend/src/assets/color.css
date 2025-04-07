@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-TatoGreen: #769586;
+  --color-TatoLightGreen: #A3C5A7;
+}
