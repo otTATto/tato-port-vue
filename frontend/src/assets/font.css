@@ -1,0 +1,19 @@
+/* フォントの読み込み */
+/* 
+  TODO: 
+    - 不要なフォント/ウェイトは随時削除する
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+/* クラスの定義 */
+/*
+  MEMO:
+    - `--font-**` は `.font-**`、つまり class 属性 `font-**` として利用可能
+*/
+@import "tailwindcss";
+@theme {
+  --font-MaruGothic: 'Zen Maru Gothic', serif;
+  /* weight options: 300, 400, 500, 700, 900 */
+  --font-Gothic: 'Noto Sans JP', sans-serif;
+  /* weight options: Variable: 100 - 900 */
+}
