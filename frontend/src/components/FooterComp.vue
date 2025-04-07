@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-center">
+    <div class="text-center font-MaruGothic font-extrabold text-neutral-400">
       <small>
         © たと・2025
       </small>
