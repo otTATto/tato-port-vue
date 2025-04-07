@@ -13,7 +13,7 @@
 2. その後、以下を実行し、Vite によるローカル開発サーバーを立てる
 
     ```bash
-    npm run dev -- --host
+    npm run dev -- --host --force
     ```
 
 3. ホスト OS から http://localhost:5173/ にアクセスする
