@@ -3,7 +3,11 @@
     <LoadingPage v-if="showLoading" />
     <div v-else class="fade-in-with-blur m-4">
       <HeaderComp />
-      <div class="rounded-lg border-2 border-TatoGreen">
+      <div :class="[
+        'rounded-lg border-2 border-TatoGreen',
+        isHome ? 'h-[91vh] bg-linear-35 from-emerald-50 to-red-50' 
+               : ''
+      ]">
         <transition class="fade-in-with-blur">
           <router-view />
         </transition>
@@ -14,18 +18,25 @@
 </template>
 
 <script setup lang="ts"> 
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { useRoute } from 'vue-router'
 import HeaderComp from './components/HeaderComp.vue'
 import FooterComp from './components/FooterComp.vue'
 import LoadingPage from './components/LoadingPage.vue'
 
-// @brief: ローディング画面を表示するかどうかのフラグ
+// @brief 現在のルートを取得
+const route = useRoute()
+
+// @brief '/' にいるかどうかを判定
+const isHome = computed(() => route.path === '/')
+
+// @brief ローディング画面を表示するかどうかのフラグ
 const showLoading = ref(true)
 
-// @brief: '/' にアクセスしたときにローディング画面を表示する
-// @detail: 3秒後にローディング画面を非表示にする
+// @brief '/' にアクセスしたときにローディング画面を表示する
+// @detail 3秒後にローディング画面を非表示にする
 onMounted(() => {
-  if (window.location.pathname === '/') {
+  if (isHome) {
     setTimeout(() => {
       showLoading.value = false
     }, 3000)

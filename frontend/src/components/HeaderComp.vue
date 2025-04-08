@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="flex items-center justify-between mb-2">
     <!-- ロゴ -->
-    <img src="../img/icon/tato_text.webp" alt="Tato Logo" class="ml-1 -mb-4 w-13" />
+    <img src="../img/icon/tato_text.webp" alt="Tato Logo" class="ml-1 w-13" />
     <!-- ナビ -->
-    <nav class="flex justify-end mr-2">
+    <nav class="flex justify-end mr-2 mb-1">
       <ul class="flex space-x-2 text-gray-300">
         <li v-if="isActiveRoute('home')">
           <div class="text-TatoGreen">
@@ -51,7 +51,6 @@ const route = useRoute()
 // @param name: ルートの名前
 // @return true/false
 const isActiveRoute = (name: string): boolean => {
-  console.log(route.name)
   return route.name === name
 }
 
