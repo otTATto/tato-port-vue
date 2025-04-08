@@ -10,13 +10,18 @@
     <div class="scroll-infinity absolute top-10 w-full overflow-hidden gallery-fade-in">
       <div class="scroll-infinity__wrap gallery-row">
         <ul class="scroll-infinity__list scroll-infinity__list--right">
-          <li v-for="n in 10" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/image${n}.webp`" alt="Gallery Image" />
+          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
+            <img :src="`../src/img/gallery/top/image${n}.webp`" alt="Gallery Image" />
           </li>
         </ul>
         <ul class="scroll-infinity__list scroll-infinity__list--right">
-          <li v-for="n in 10" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/image${n}.webp`" alt="Gallery Image" />
+          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
+            <img :src="`../src/img/gallery/top/image${n}.webp`" alt="Gallery Image" />
+          </li>
+        </ul>
+        <ul class="scroll-infinity__list scroll-infinity__list--right">
+          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
+            <img :src="`../src/img/gallery/top/image${n}.webp`" alt="Gallery Image" />
           </li>
         </ul>
       </div>
@@ -26,13 +31,18 @@
     <div class="scroll-infinity absolute bottom-10 w-full overflow-hidden gallery-fade-in">
       <div class="scroll-infinity__wrap gallery-row">
         <ul class="scroll-infinity__list scroll-infinity__list--left">
-          <li v-for="n in 10" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/image${n}.webp`" alt="Gallery Image" />
+          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
+            <img :src="`../src/img/gallery/bottom/image${n}.webp`" alt="Gallery Image" />
           </li>
         </ul>
         <ul class="scroll-infinity__list scroll-infinity__list--left">
-          <li v-for="n in 10" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/image${n}.webp`" alt="Gallery Image" />
+          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
+            <img :src="`../src/img/gallery/bottom/image${n}.webp`" alt="Gallery Image" />
+          </li>
+        </ul>
+        <ul class="scroll-infinity__list scroll-infinity__list--left">
+          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
+            <img :src="`../src/img/gallery/bottom/image${n}.webp`" alt="Gallery Image" />
           </li>
         </ul>
       </div>
@@ -110,7 +120,7 @@ defineOptions({
   padding: 0
 }
 .scroll-infinity__list--left {
-  animation: infinity-scroll-left 60s infinite linear 0.5s both;
+  animation: infinity-scroll-left 40s infinite linear 0.5s both;
 }
 .scroll-infinity__item {
   width: 30vh;
@@ -129,7 +139,7 @@ defineOptions({
   }
 }
 .scroll-infinity__list--right{
-  animation :infinity-scroll-right 60s infinite linear 0.5s both;
+  animation :infinity-scroll-right 40s infinite linear 0.5s both;
 }
 
 </style>
