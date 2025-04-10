@@ -1,10 +1,18 @@
+<!-- 
+@brief プロフィールのコンポーネント
+@detail 名前、所属、外部メディアの情報を表示する 
+-->
 <template>
   <div class="px-5 text-left xl:text-2xl">
     <div class="text-gray-400 text-sm xl:text-lg font-extrabold">
       名前
     </div>
     <div>
-      佐藤太心・<span class="text-xs xl:text-sm font-extrabold mx-1 px-2 py-1 text-TatoLightGreen border-2 rounded-full">ハンドルネーム</span>たと
+      佐藤太心・
+      <span class="text-xs xl:text-sm font-extrabold mx-1 px-2 py-1 text-TatoLightGreen border-2 rounded-full">
+        ハンドルネーム
+      </span>
+      たと
     </div>
     <div class="text-xs xl:text-base font-normal text-gray-400">
       さとうたいしん
@@ -41,9 +49,9 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: 'ProfileComp'
-})
+  defineOptions({
+    name: 'ProfileComp'
+  })
 </script>
 
 <style>
