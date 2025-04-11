@@ -13,7 +13,7 @@
       <!-- 上部ギャラリー -->
       <div 
         v-if="isWebKit"
-        class="scroll-infinity absolute top-[5vh] w-full overflow-hidden gallery-fade-in">
+        class="scroll-infinity absolute top-[5dvh] w-full overflow-hidden gallery-fade-in">
         <div class="mask-x-from-75% mask-x-to-95% scroll-infinity__wrap gallery-row">
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
@@ -42,7 +42,7 @@
       <!-- 下部ギャラリー -->
       <div 
         v-if="isWebKit"
-        class="scroll-infinity absolute top-[55vh] w-full overflow-hidden gallery-fade-in">
+        class="scroll-infinity absolute top-[55dvh] w-full overflow-hidden gallery-fade-in">
         <div class="mask-x-from-75% mask-x-to-95% scroll-infinity__wrap gallery-row">
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
@@ -212,7 +212,7 @@
 <style scoped>
   /* モットーのアニメーション */
   .shrink-animation {
-    width: 30vh;
+    width: 30dvh;
     transition: width 0.7s ease-in-out;
   }
 
@@ -269,7 +269,7 @@
     animation: infinity-scroll-left 40s infinite linear 0.5s both;
   }
   .scroll-infinity__item {
-    width: 30vh;
+    width: 30dvh;
   }
   .scroll-infinity__item>img {
     width: 100%;
