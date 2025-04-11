@@ -7,7 +7,9 @@
 <template>
   <div class="my-10">
     <!-- タイトル -->
-    <h3 :class="`text-${title.size}`">
+    <h3 :class="[
+      title.size === 'big' ? 'text-3xl' : 'text-2xl',
+    ]">
       <span :class="date.class">{{ date.text }}</span>
       {{ title.text }}
     </h3>

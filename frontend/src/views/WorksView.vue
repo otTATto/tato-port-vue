@@ -12,7 +12,7 @@
         class: 'text-green-500'
       }"
       :title="{
-        size: '3xl',
+        size: 'big',
         text: '重度運動機能障害者 支援システム 研究開発 ＠産総研'
       }"
       image=""
@@ -42,7 +42,7 @@
         class: 'text-green-500'
       }"
       :title="{
-        size: '3xl',
+        size: 'big',
         text: '利根運河ブランドプロジェクト'
       }"
       :image="bannerToneungaBp"
@@ -69,7 +69,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '3xl',
+        size: 'big',
         text: '情報処理学会 全国大会 学生奨励賞 受賞'
       }"
       :image="bannerIpsj"
@@ -95,7 +95,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '3xl',
+        size: 'big',
         text: 'ゲーム開発学特論 最優秀賞 受賞'
       }"
       :image="bannerCygames"
@@ -125,7 +125,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '3xl',
+        size: 'big',
         text: 'プロジェクト課題 最優秀賞 受賞'
       }"
       :image="bannerProjectAsg"
@@ -157,7 +157,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '3xl',
+        size: 'big',
         text: '理科大学生アイドルグループ ロゴ制作'
       }"
       :image="bannerIdol"
@@ -183,7 +183,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '3xl',
+        size: 'big',
         text: '水辺で乾杯ポスター制作'
       }"
       :image="bannerMizbe"
@@ -214,7 +214,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '2xl',
+        size: 'small',
         text: 'ポートフォリオサイト制作'
       }"
       :image="bannerPortfolio"
@@ -246,7 +246,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '2xl',
+        size: 'small',
         text: 'カウントダウンゲーム「7.777秒チャレンジ」制作'
       }"
       image=""
@@ -275,7 +275,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '2xl',
+        size: 'small',
         text: 'こどもと一緒に学ぶ有機農法 イベントポスター制作'
       }"
       image=""
@@ -301,7 +301,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '2xl',
+        size: 'small',
         text: '理科大こいのぼり制作'
       }"
       :image="bannerKoinobori"
@@ -326,7 +326,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '2xl',
+        size: 'small',
         text: 'フォント当てゲーム「FontGuessr」制作'
       }"
       image=""
@@ -355,7 +355,7 @@
         class: 'text-gray-400'
       }"
       :title="{
-        size: '2xl',
+        size: 'small',
         text: 'AI チャットツール制作'
       }"
       image=""
