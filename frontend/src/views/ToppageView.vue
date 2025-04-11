@@ -11,22 +11,22 @@
     <div class="scroll-infinity absolute top-10 w-full overflow-hidden gallery-fade-in">
       <div class="scroll-infinity__wrap gallery-row">
         <ul class="scroll-infinity__list scroll-infinity__list--right">
-          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/top/image${n}.webp`" alt="Gallery Image"
+          <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
+            <img :src="img" alt="Gallery Image"
               class="rounded-lg"
             />
           </li>
         </ul>
         <ul class="scroll-infinity__list scroll-infinity__list--right">
-          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/top/image${n}.webp`" alt="Gallery Image" 
+          <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
+            <img :src="img" alt="Gallery Image"
               class="rounded-lg"
             />
           </li>
         </ul>
         <ul class="scroll-infinity__list scroll-infinity__list--right">
-          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/top/image${n}.webp`" alt="Gallery Image" 
+          <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
+            <img :src="img" alt="Gallery Image"
               class="rounded-lg"
             />
           </li>
@@ -38,22 +38,22 @@
     <div class="scroll-infinity absolute bottom-10 w-full overflow-hidden gallery-fade-in">
       <div class="scroll-infinity__wrap gallery-row">
         <ul class="scroll-infinity__list scroll-infinity__list--left">
-          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/bottom/image${n}.webp`" alt="Gallery Image" 
+          <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
+            <img :src="img" alt="Gallery Image"
               class="rounded-lg"
             />
           </li>
         </ul>
         <ul class="scroll-infinity__list scroll-infinity__list--left">
-          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/bottom/image${n}.webp`" alt="Gallery Image" 
+          <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
+            <img :src="img" alt="Gallery Image"
               class="rounded-lg"
             />
           </li>
         </ul>
         <ul class="scroll-infinity__list scroll-infinity__list--left">
-          <li v-for="n in 4" :key="'top-' + n" class="scroll-infinity__item mx-2">
-            <img :src="`../src/img/gallery/bottom/image${n}.webp`" alt="Gallery Image" 
+          <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
+            <img :src="img" alt="Gallery Image"
               class="rounded-lg"
             />
           </li>
@@ -66,6 +66,21 @@
 
 <script setup lang="ts">
   import { ref, onMounted } from 'vue'
+
+  // ギャラリー画像のインポート
+  import topImage1 from '@/img/gallery/top/image1.webp'
+  import topImage2 from '@/img/gallery/top/image2.webp'
+  import topImage3 from '@/img/gallery/top/image3.webp'
+  import topImage4 from '@/img/gallery/top/image4.webp'
+
+  const topImages = [topImage1, topImage2, topImage3, topImage4]
+
+  import bottomImage1 from '@/img/gallery/bottom/image1.webp'
+  import bottomImage2 from '@/img/gallery/bottom/image2.webp'
+  import bottomImage3 from '@/img/gallery/bottom/image3.webp'
+  import bottomImage4 from '@/img/gallery/bottom/image4.webp'
+
+  const bottomImages = [bottomImage1, bottomImage2, bottomImage3, bottomImage4]
 
   // モットーの縮小状態
   const isShrunk = ref(false)

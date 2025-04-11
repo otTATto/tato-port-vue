@@ -45,7 +45,7 @@
         size: '3xl',
         text: '利根運河ブランドプロジェクト'
       }"
-      image="../src/img/works/banner_toneungaBp.webp"
+      :image="bannerToneungaBp"
       :types="[
         'Engineer',
         'Design'
@@ -72,7 +72,7 @@
         size: '3xl',
         text: '情報処理学会 全国大会 学生奨励賞 受賞'
       }"
-      image="../src/img/works/banner_ipsj.webp"
+      :image="bannerIpsj"
       :types="[
         'Study'
       ]"
@@ -98,7 +98,7 @@
         size: '3xl',
         text: 'ゲーム開発学特論 最優秀賞 受賞'
       }"
-      image="../src/img/works/banner_cygames.webp"
+      :image="bannerCygames"
       :types="[
         'Engineer'
       ]"
@@ -128,7 +128,7 @@
         size: '3xl',
         text: 'プロジェクト課題 最優秀賞 受賞'
       }"
-      image="../src/img/works/banner_projectAsg.webp"
+      :image="bannerProjectAsg"
       :types="[
         'Engineer'
       ]"
@@ -160,7 +160,7 @@
         size: '3xl',
         text: '理科大学生アイドルグループ ロゴ制作'
       }"
-      image="../src/img/works/banner_idol.webp"
+      :image="bannerIdol"
       :types="[
         'Design'
       ]"
@@ -186,7 +186,7 @@
         size: '3xl',
         text: '水辺で乾杯ポスター制作'
       }"
-      image="../src/img/works/banner_mizbe.webp"
+      :image="bannerMizbe"
       :types="[
         'Design'
       ]"
@@ -217,7 +217,7 @@
         size: '2xl',
         text: 'ポートフォリオサイト制作'
       }"
-      image="../src/img/works/banner_portfolio.webp"
+      :image="bannerPortfolio"
       :types="[
         'Engineer',
         'Design'
@@ -304,7 +304,7 @@
         size: '2xl',
         text: '理科大こいのぼり制作'
       }"
-      image="../src/img/works/banner_koinobori.webp"
+      :image="bannerKoinobori"
       :types="[
         'Design'
       ]"
@@ -383,7 +383,16 @@
 
 <script setup lang="ts">
   import WorkCard from '../components/WorkCard.vue';
-  import TotopbuttonComp from '../components/TotopbuttonComp.vue';
+
+  // @brief 画像のインポート
+  import bannerToneungaBp from '@/img/works/banner_toneungaBp.webp'
+  import bannerIpsj from '@/img/works/banner_ipsj.webp'
+  import bannerCygames from '@/img/works/banner_cygames.webp'
+  import bannerProjectAsg from '@/img/works/banner_projectAsg.webp'
+  import bannerIdol from '@/img/works/banner_idol.webp'
+  import bannerMizbe from '@/img/works/banner_mizbe.webp'
+  import bannerPortfolio from '@/img/works/banner_portfolio.webp'
+  import bannerKoinobori from '@/img/works/banner_koinobori.webp'
 
   defineOptions({
     name: 'WorksTop'
