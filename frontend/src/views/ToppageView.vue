@@ -13,7 +13,7 @@
       <!-- 上部ギャラリー -->
       <div 
         v-if="isWebKit"
-        class="scroll-infinity absolute top-[5dvh] w-full overflow-hidden gallery-fade-in">
+        class="scroll-infinity absolute top-[13dvh] w-full overflow-hidden gallery-fade-in">
         <div class="mask-x-from-75% mask-x-to-95% scroll-infinity__wrap gallery-row">
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
@@ -42,7 +42,7 @@
       <!-- 下部ギャラリー -->
       <div 
         v-if="isWebKit"
-        class="scroll-infinity absolute top-[55dvh] w-full overflow-hidden gallery-fade-in">
+        class="scroll-infinity absolute top-[63dvh] w-full overflow-hidden gallery-fade-in">
         <div class="mask-x-from-75% mask-x-to-95% scroll-infinity__wrap gallery-row">
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
@@ -179,8 +179,7 @@
     // @brief iOS, iPad OS, iPod OS かどうか、および Safari ブラウザかどうかの判定
     const ua = navigator.userAgent
     // @brief iOS, iPad OS, iPod OS かどうかの判定フラグ
-    // const isIOS = /iPhone|iPad|iPod/i.test(ua)
-    const isIOS: boolean = true
+    const isIOS = /iPhone|iPad|iPod/i.test(ua)
     // @brief Safari かどうかを判定
     const isSafari: boolean = /Safari/.test(ua) 
                            && !/Chrome/.test(ua) 
