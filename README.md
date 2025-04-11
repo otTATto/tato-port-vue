@@ -57,3 +57,49 @@
     ```
 
 4. 🎉 ホスト OS のブラウザから **http://localhost:5173/** にアクセスして、開発開始！
+
+# ビルドについて
+
+## MEMO:
+
+- 以下は単なる個人の備忘録であり、Firebase Hosting 時に「たと」本人のみ知る Google アカウントによるログインが必要になります
+
+---
+
+1. コンテナに入る（起動中のコンテナに入ったほうが楽なので、別 CLI で `docker compose up` を実行した上で以下を実行する）
+
+    ```bash
+    docker exec -it tato-port-vue-frontend-1 sh
+    ```
+
+2. Vue をビルドする
+
+    ```bash
+    npm run build
+    ```
+
+3. ビルドが完了し `./frontend/dist/` が生成/更新されたら、コンテナを抜ける
+
+    ```bash
+    exit
+    ```
+
+4. 以下を実行する
+
+    ```bash
+    cd ../
+    firebase deploy
+    ```
+
+5. 🎉 ビルドが成功したら **https://tato-port.web.app/** にアクセスして、実機で動作確認！
+
+### 上手くいかない場合
+
+1.  上手くいかない場合は、初期化する
+
+    ```bash
+    firebase init
+    ```
+
+2. `public directory` は `./tato-port-vue/frontend/dist/`
+
