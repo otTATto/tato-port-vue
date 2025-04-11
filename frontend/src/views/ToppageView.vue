@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center h-full">
+  <div class="flex items-center justify-center h-full relative">
     
     <!-- 中央のモットー -->
     <img src="../img/motto/motto.webp" 
@@ -8,29 +8,39 @@
     />
 
     <!-- 上部ギャラリー -->
-    <div class="scroll-infinity absolute top-10 w-full overflow-hidden gallery-fade-in">
-      <div class="scroll-infinity__wrap gallery-row">
-        <ul class="scroll-infinity__list scroll-infinity__list--right">
-          <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-            <img :src="img" alt="Gallery Image"
-              class="rounded-lg"
-            />
-          </li>
-        </ul>
-        <ul class="scroll-infinity__list scroll-infinity__list--right">
-          <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-            <img :src="img" alt="Gallery Image"
-              class="rounded-lg"
-            />
-          </li>
-        </ul>
-        <ul class="scroll-infinity__list scroll-infinity__list--right">
-          <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-            <img :src="img" alt="Gallery Image"
-              class="rounded-lg"
-            />
-          </li>
-        </ul>
+    <!-- 
+    MEMO:  
+      - 上部ギャラリーで実験的実装をしている
+      - absolute を relative でラップしている
+        - absolute は相対位置の基準を relative な親に依存するため明示
+        - しかし、これでは上手く描画されない…
+        - relative でラップしていない「下部ギャラリー」は上手く描画される
+    -->
+    <div class="h-[100dvh] relative overflow-hidden bg-red-500">
+      <div class="scroll-infinity absolute inset-x-0 top-10 bottom-10 w-full gallery-fade-in">
+        <div class="scroll-infinity__wrap gallery-row">
+          <ul class="scroll-infinity__list scroll-infinity__list--right">
+            <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
+              <img :src="img" alt="Gallery Image"
+                class="rounded-lg"
+              />
+            </li>
+          </ul>
+          <ul class="scroll-infinity__list scroll-infinity__list--right">
+            <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
+              <img :src="img" alt="Gallery Image"
+                class="rounded-lg"
+              />
+            </li>
+          </ul>
+          <ul class="scroll-infinity__list scroll-infinity__list--right">
+            <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
+              <img :src="img" alt="Gallery Image"
+                class="rounded-lg"
+              />
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
