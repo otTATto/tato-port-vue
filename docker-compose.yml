@@ -1,0 +1,12 @@
+services:
+  frontend:
+    build:
+      context: .       
+      dockerfile: .docker/frontend/Dockerfile
+    image: vue:1.0
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/src
+    working_dir: /src
+    command: npm run dev -- --host --force

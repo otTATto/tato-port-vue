@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-TatoGreen: #769586;
+  --color-TatoGreenTransparent: rgba(118, 149, 134, 0.1);
+  --color-TatoLightGreen: #A3C5A7;
+  --color-TatoLightGreenTransparent: rgba(163, 197, 167, 0.1);
+
+  /* for-workcard */
+  --color-Engineer: oklch(70.2% 0.183 293.541);
+  --color-EngineerLight: oklch(97.7% 0.014 308.299);
+  --color-Design: oklch(79.5% 0.184 86.047);
+  --color-DesignLight: oklch(98.7% 0.026 102.212);
+  --color-Study: oklch(74.6% 0.16 232.661);
+  --color-StudyLight: oklch(97.7% 0.013 236.62);
+}
+
+/* for-workcard */
+.text-Engineer {
+  color: var(--color-Engineer);
+}
+.bg-EngineerLight {
+  background-color: var(--color-EngineerLight);
+}
+.text-Design {
+  color: var(--color-Design);
+}
+.bg-DesignLight {
+  background-color: var(--color-DesignLight);
+}
+.text-Study {
+  color: var(--color-Study);
+}
+.bg-StudyLight {
+  background-color: var(--color-StudyLight);
+}
