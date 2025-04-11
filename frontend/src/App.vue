@@ -10,7 +10,7 @@
       <HeaderscrolledComp />
       <div :class="[
         'rounded-lg border-2 border-TatoGreen',
-        isHome ? 'h-[91vh] bg-linear-35 from-emerald-50 to-red-50' 
+        isHome ? 'h-[91dvh] bg-linear-35 from-emerald-50 to-red-50' 
                : '']">
         <transition class="fade-in-with-blur">
           <!-- @brief ルーティングされたコンポーネントを表示 -->
