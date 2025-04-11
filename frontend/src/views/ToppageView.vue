@@ -107,6 +107,16 @@
     transition: width 0.7s ease-in-out;
   }
 
+  /* ギャラリー画像のCSS */
+  .gallery-row {
+    overflow: hidden;
+    position: relative;
+  }
+  img {
+    display: block;
+    vertical-align: middle;
+  }
+
   /* ギャラリー専用のフェードインアニメーション */
   .gallery-fade-in {
     opacity: 0;
