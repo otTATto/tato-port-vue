@@ -2,6 +2,19 @@
 
 ポートフォリオサイト [**tato-port**](https://github.com/otTATto/tato-port) を **Vue** w/ **TypeScript** で再構築する。
 
+**TOC**
+
+- [ポートフォリオサイト（Vue）](#ポートフォリオサイトvue)
+- [開発について](#開発について)
+  - [［推奨］`docker compose` を使う方法](#推奨docker-compose-を使う方法)
+    - [1️⃣ 初回の場合](#1️⃣-初回の場合)
+    - [2️⃣ 回目以降の場合](#2️⃣-回目以降の場合)
+  - [［非推奨］`docker compose` を使わない方法](#非推奨docker-compose-を使わない方法)
+- [ビルドについて](#ビルドについて)
+  - [MEMO:](#memo)
+    - [ビルドがうまくいかず初期化する場合](#ビルドがうまくいかず初期化する場合)
+
+
 # 開発について
 
 ## ［推奨］`docker compose` を使う方法
@@ -57,3 +70,49 @@
     ```
 
 4. 🎉 ホスト OS のブラウザから **http://localhost:5173/** にアクセスして、開発開始！
+
+# ビルドについて
+
+## MEMO:
+
+- 以下は単なる個人の備忘録であり、Firebase Hosting 時に「たと」本人のみ知る Google アカウントによるログインが必要になります
+
+---
+
+1. コンテナに入る（起動中のコンテナに入ったほうが楽なので、別 CLI で `docker compose up` を実行した上で以下を実行する）
+
+    ```bash
+    docker exec -it tato-port-vue-frontend-1 sh
+    ```
+
+2. Vue をビルドする
+
+    ```bash
+    npm run build
+    ```
+
+3. ビルドが完了し `./frontend/dist/` が生成/更新されたら、コンテナを抜ける
+
+    ```bash
+    exit
+    ```
+
+4. 以下を実行する
+
+    ```bash
+    cd ../
+    firebase deploy
+    ```
+
+5. 🎉 ビルドが成功したら **https://tato-port.web.app/** にアクセスして、実機で動作確認！
+
+### ビルドがうまくいかず初期化する場合
+
+1.  上手くいかない場合は、初期化する
+
+    ```bash
+    firebase init
+    ```
+
+2. `public directory` は `./tato-port-vue/frontend/dist/`
+
