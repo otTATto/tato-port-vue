@@ -1,19 +1,6 @@
-# ポートフォリオサイト（Vue）
+# ポートフォリオサイト ![Vue Badge](https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=%23FFFFFF) ![TypeScript Badge](https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=%23FFFFFF)
 
-ポートフォリオサイト [**tato-port**](https://github.com/otTATto/tato-port) を **Vue** w/ **TypeScript** で再構築する。
-
-**TOC**
-
-- [ポートフォリオサイト（Vue）](#ポートフォリオサイトvue)
-- [開発について](#開発について)
-  - [［推奨］`docker compose` を使う方法](#推奨docker-compose-を使う方法)
-    - [1️⃣ 初回の場合](#1️⃣-初回の場合)
-    - [2️⃣ 回目以降の場合](#2️⃣-回目以降の場合)
-  - [［非推奨］`docker compose` を使わない方法](#非推奨docker-compose-を使わない方法)
-- [ビルドについて](#ビルドについて)
-  - [MEMO:](#memo)
-    - [ビルドがうまくいかず初期化する場合](#ビルドがうまくいかず初期化する場合)
-
+ポートフォリオサイト [**tato-port**](https://github.com/otTATto/tato-port) を **Vue.js**, **TypeScript** で再構築する。
 
 # 開発について
 
