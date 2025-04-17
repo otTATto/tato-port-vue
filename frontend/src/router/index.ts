@@ -18,6 +18,12 @@ const router = createRouter({
       name: 'about-me',
       component: () => import('../views/AboutmeView.vue'),
     },
+    // 404 ページ
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: () => import('../views/NotfoundView.vue'),
+    }
   ],
 })
 

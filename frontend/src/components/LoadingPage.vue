@@ -3,7 +3,7 @@
 @detail ローディングのアニメーションは AE で作成した .gif 
 -->
 <template>
-  <div class="loading-page flex items-center justify-center bg-zinc-800 text-white h-screen">
+  <div class="loading-page flex items-center justify-center bg-zinc-800 text-white h-dvh">
     <img src="../img/loading/tato-logo-anime.gif" alt="Loading" class="w-20" />
   </div>
 </template>
