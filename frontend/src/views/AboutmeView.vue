@@ -2,7 +2,7 @@
   <div class="my-5">
     <div class="grid grid-cols-5 md:grid-cols-2 lg:grid-cols-6">
       <div class="col-span-4 md:col-span-1 lg:col-span-2">
-        <img src="../img/icon/tato-comet.webp" alt="Logo"/>
+        <img src="../img/icon/tato-comet.webp" alt="Logo" v-prevent-image-actions />
       </div>
       <div class="hidden lg:block lg:col-span-1"></div>
       <!-- PC向けプロフィール -->

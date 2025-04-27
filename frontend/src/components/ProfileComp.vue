@@ -31,18 +31,18 @@
     <div class="mt-2"></div>
     <div>
       <a href="https://github.com/otTATto" 
-        class="text-sm xl:text-lg font-extrabold mx-1 px-2 py-1 border-2 border-gray-700 rounded-full hover:bg-gray-700 hover:text-white transition duration-400 ease-in-out" 
+        class="text-sm xl:text-lg font-extrabold mx-1 pl-3 pr-2 py-1 border-2 border-gray-700 rounded-full hover:bg-gray-700 hover:text-white transition duration-400 ease-in-out" 
         target="_blank" 
         rel="noopener noreferrer">
         <font-awesome-icon :icon="['fab', 'github']" />
-        otTATto
+        GitHub
       </a>
-      <a href="https://x.com/0123tato" 
-        class="text-sm xl:text-lg font-extrabold mx-1 px-2 py-1 border-2 border-gray-700 rounded-full hover:bg-gray-700 hover:text-white transition duration-400 ease-in-out" 
+      <a href="https://qiita.com/otTATto" 
+        class="text-sm xl:text-lg font-extrabold mx-1 px-3 py-1 border-2 border-gray-700 rounded-full hover:bg-gray-700 hover:text-white transition duration-400 ease-in-out" 
         target="_blank" 
         rel="noopener noreferrer">
-        <font-awesome-icon :icon="['fab', 'x-twitter']" />
-        0123tato
+        <img :src="QiitaIcon" class="w-4 xl:w-6 mb-1 inline-block">
+        Qiita
       </a>
     </div>
   </div>
@@ -52,6 +52,9 @@
   defineOptions({
     name: 'ProfileComp'
   })
+
+  // @brief 画像のインポート
+  import QiitaIcon from '@/img/icon/qiita-icon.png'
 </script>
 
 <style>
