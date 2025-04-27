@@ -16,7 +16,7 @@
     <!-- 画像 -->
     <div class="w-full my-3">
       <img v-if="image" :src="image" :alt="`${title.text} の画像`"
-        class="rounded-lg"
+        class="rounded-lg" v-prevent-image-actions
       />
     </div>
     <!-- タイプとタグ（PC） -->

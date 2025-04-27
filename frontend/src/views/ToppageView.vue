@@ -7,7 +7,8 @@
       <img src="../img/motto/motto.webp" 
         v-if="isWebKit"
         alt="Motto" 
-        :class="['w-[88vw] md:w-[70vw] xl:w-[50vw]', isShrunk ? 'shrink-animation' : '']"  
+        :class="['w-[88vw] md:w-[70vw] xl:w-[50vw]', isShrunk ? 'shrink-animation' : '']"
+        v-prevent-image-actions  
       />
 
       <!-- 上部ギャラリー -->
@@ -18,21 +19,21 @@
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
@@ -47,21 +48,21 @@
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
@@ -77,6 +78,7 @@
         v-if="!isWebKit"
         alt="Motto" 
         :class="['w-[88vw] md:w-[70vw] xl:w-[50vw]', isShrunk ? 'shrink-animation' : '']"  
+        v-prevent-image-actions
       />
 
       <!-- 上部ギャラリー -->
@@ -87,21 +89,21 @@
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
@@ -116,21 +118,21 @@
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
               <img :src="img" alt="Gallery Image"
-                class="rounded-lg"
+                class="rounded-lg" v-prevent-image-actions
               />
             </li>
           </ul>
