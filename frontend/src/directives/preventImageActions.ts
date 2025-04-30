@@ -12,14 +12,27 @@ export const preventImageActions: Directive = {
       el.addEventListener('selectstart', (e) => e.preventDefault());
       el.addEventListener('mousedown', (e) => e.preventDefault());
       // スマホ: タッチ操作を無効化
+      let touchTimer: number | null = null;
       el.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        // タッチスタートしてすぐ終わらせるふりをする
-        const touchEndEvent = new Event('touchend', { bubbles: true, cancelable: true });
-        e.target?.dispatchEvent(touchEndEvent);
-      }, { passive: false });
-      // スマホ: タッチ移動を無効化
-      el.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+        // 500ms 以上のタッチを長押しと見なし、タッチ操作を無効化
+        touchTimer = window.setTimeout(() => {
+          e.preventDefault();
+        }, 500);
+      });
+      el.addEventListener('touchmove', () => {
+        // 指を動かしたら、スクロールと見なし、タッチ操作の無効化を解除
+        if (touchTimer !== null) {
+          clearTimeout(touchTimer);
+          touchTimer = null;
+        }
+      });
+      el.addEventListener('touchend', () => {
+        // タッチが終わったら、タッチ操作の無効化を解除
+        if (touchTimer !== null) {
+          clearTimeout(touchTimer);
+          touchTimer = null;
+        }
+      });
     } else {
       console.warn('v-prevent-image-actions is attached to a non-image element.');
     }
