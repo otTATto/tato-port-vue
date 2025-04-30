@@ -1,10 +1,8 @@
 # ポートフォリオサイト ![Vue Badge](https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=%23FFFFFF) ![TypeScript Badge](https://img.shields.io/badge/TypeScript-007ACC.svg?logo=typescript&logoColor=%23FFFFFF)
 
-ポートフォリオサイト [**tato-port**](https://github.com/otTATto/tato-port) を **Vue.js**, **TypeScript** で再構築する。
+ポートフォリオサイト [**tato-port**](https://github.com/otTATto/tato-port) を **Vue.js** + **TypeScript** で再構築する。
 
-# 開発について
-
-## ［推奨］`docker compose` を使う方法
+## 開発について
 
 1. 以下を実行して Docker イメージ `vue:1.0` の有無を確認する
 
@@ -36,33 +34,11 @@
 4. ビルド済のコンテナ `vue:1.0` に入り、ローカル開発サーバーが立ち上がる
 5. 🎉 ホスト OS のブラウザから **http://localhost:5173/** にアクセスして、開発開始！
 
-## ［非推奨］`docker compose` を使わない方法
+## ビルドについて
 
-1. `./.docker/frontend/` 内において以下を実行し、Dockerfile をビルドする
+### 💡 MEMO
 
-    ```bash
-    docker build -t vue:1.0 .
-    ```
-
-2. 以下を実行し、Vite によるローカル開発サーバーを立てる
-
-    ```bash
-    docker run --rm -it -p 5173:5173 -v ${PWD}:/src vue:1.0 sh
-    ```
-
-3. 以下を実行し、Vite によるローカル開発サーバーを立てる
-
-    ```bash
-    npm run dev -- --host --force
-    ```
-
-4. 🎉 ホスト OS のブラウザから **http://localhost:5173/** にアクセスして、開発開始！
-
-# ビルドについて
-
-## MEMO:
-
-- 以下は単なる個人の備忘録であり、Firebase Hosting 時に「たと」本人のみ知る Google アカウントによるログインが必要になります
+以下は単なる個人の備忘録であり、Firebase Hosting 時に「たと」本人のみ知る Google アカウントによるログインが必要になります
 
 ---
 
@@ -93,7 +69,7 @@
 
 5. 🎉 ビルドが成功したら **https://tato-port.web.app/** にアクセスして、実機で動作確認！
 
-### ビルドがうまくいかず初期化する場合
+### 😭 ビルドがうまくいかず初期化が必要な場合
 
 1.  上手くいかない場合は、初期化する
 
