@@ -11,15 +11,6 @@ export const preventImageActions: Directive = {
       // PC: ドラッグを無効化
       el.addEventListener('selectstart', (e) => e.preventDefault());
       el.addEventListener('mousedown', (e) => e.preventDefault());
-      // スマホ: タッチ操作を無効化
-      el.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        // タッチスタートしてすぐ終わらせるふりをする
-        const touchEndEvent = new Event('touchend', { bubbles: true, cancelable: true });
-        e.target?.dispatchEvent(touchEndEvent);
-      }, { passive: false });
-      // スマホ: タッチ移動を無効化
-      el.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
     } else {
       console.warn('v-prevent-image-actions is attached to a non-image element.');
     }

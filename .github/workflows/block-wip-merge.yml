@@ -1,0 +1,19 @@
+# wip/* ブランチを main や develop にマージしないよう PR 作成時にエラーを出す
+
+name: Block WIP to main/develop
+
+on:
+    pull_request:
+        branches:
+            - main
+            - develop
+
+jobs:
+    block_wip_merge:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Block merge from WIP branches
+              if: startsWith(github.head_ref, 'wip/')
+              run: |
+                echo "❌ WIP ブランチから main/develop へのマージは禁止されています！"
+                exit 1
