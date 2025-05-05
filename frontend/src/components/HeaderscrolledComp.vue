@@ -1,7 +1,7 @@
 <template>
     <!-- スクロール時に出現するヘッダー -->
     <teleport to="body">
-      <div class="fixed top-10 right-5 z-50">
+      <div class="fixed top-5 right-5 z-50">
         <div 
           ref="scrolledHeader"
           class="hidden py-3 px-5 font-black bg-white/80 backdrop-blur shadow-lg rounded-full fixed-button'"
