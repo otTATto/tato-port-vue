@@ -63,7 +63,6 @@
 4. 以下を実行する
 
     ```bash
-    cd ../
     firebase deploy
     ```
 
