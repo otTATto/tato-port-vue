@@ -1,15 +1,15 @@
 <template>
     <!-- スクロール時に出現するヘッダー -->
     <teleport to="body">
-      <div class="fixed top-10 right-5 z-50">
+      <div class="fixed top-5 right-5 z-50">
         <div 
           ref="scrolledHeader"
-          class="hidden py-3 px-5 font-black bg-white/80 backdrop-blur shadow-lg rounded-full fixed-button'"
+          class="hidden py-3 px-5 bg-white/80 backdrop-blur shadow-lg rounded-full fixed-button'"
           @click="scrollToTop">
           <nav class="flex justify-end mr-2 mb-1">
             <ul class="flex space-x-2 text-gray-300">
               <li v-if="isActiveRoute('home')">
-                <div class="text-TatoGreen cursor-not-allowed">
+                <div class="text-TatoGreen font-black cursor-not-allowed">
                   Top
                 </div>
               </li>
@@ -19,19 +19,17 @@
                 </router-link>
               </li>
               <li>/</li>
-              <li v-if="isActiveRoute('works')">
-                <div class="text-TatoGreen cursor-not-allowed">
+              <li :class="isActiveRoute('works') ? 'text-TatoGreen font-black cursor-not-allowed' : 'font-medium'">
+                <div v-if="isActiveRoute('works')">
                   Works
                 </div>
-              </li>
-              <li v-else>
-                <router-link to="/works/" class="text-gray-400 hover:text-red-400 transition duration-400 ease-in-out">
+                <router-link v-else to="/" class="text-gray-400 hover:text-red-400 transition duration-400 ease-in-out">
                   Works
                 </router-link>
               </li>
               <li>/</li>
               <li v-if="isActiveRoute('about-me')">
-                <div class="text-TatoGreen cursor-not-allowed">
+                <div class="text-TatoGreen font-black cursor-not-allowed">
                   About Me
                 </div>
               </li>
@@ -71,6 +69,7 @@
   const scrollPosition = ref(0);
 
   // スクロールイベントのハンドラ
+  // @brief スクロール位置が 50px より大きい/以下 のときにヘッダーを 表示/非表示 する
   const updateScrollPosition = () => {
     scrollPosition.value = window.scrollY;
     if (scrolledHeader.value) {
