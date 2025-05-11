@@ -78,9 +78,11 @@
         scrolledHeader.value.classList.add('fade-in-with-blur');
         scrolledHeader.value.classList.remove('fade-out-with-blur');
         scrolledHeader.value.classList.remove('hidden');
+        scrolledHeader.value.style.pointerEvents = 'auto'; // 当たり判定を有効化
       } else {
         scrolledHeader.value.classList.add('fade-out-with-blur');
         scrolledHeader.value.classList.remove('fade-in-with-blur');
+        scrolledHeader.value.style.pointerEvents = 'none'; // 当たり判定を無効化
       }
     }
   };
@@ -108,6 +110,7 @@
       opacity: 0;
       filter: blur(10px);
       animation: fadeInBlur 0.5s ease-out forwards;
+      pointer-events: none; /* 初期状態で当たり判定を無効化 */
     }
     @keyframes fadeInBlur {
       0% {
@@ -124,6 +127,7 @@
       opacity: 1;
       filter: blur(0);
       animation: fadeOutBlur 0.5s ease-out forwards;
+      pointer-events: none; /* 非表示時に当たり判定を無効化 */
     }
     @keyframes fadeOutBlur {
       0% {
