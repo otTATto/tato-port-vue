@@ -56,8 +56,8 @@
       ]"
       description="東京理科大学 野田キャンパスの近くにある「利根運河」の魅力を発信するためのプロジェクトに、主にデザイナーとして携わりました。利根運河をモチーフにデザインした商品を、地域のイベントや大学の学会などで販売しています。"
       :detail="{
-        type: 'external',
-        link: 'https://224.works/'
+        type: 'internal',
+        link: '/works/toneunga-bp/'
       }"
     />
 

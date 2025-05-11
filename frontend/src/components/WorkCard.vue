@@ -72,7 +72,7 @@
       <RouterLink 
         v-if="detail.type === 'internal'"
         :to="detail.link" 
-        class="text-TatoLightGreen hover:text-red-400 transition duration-400 ease-in-out">
+        class="font-extrabold mx-1 pl-3 pr-3 py-1 border-2 border-TatoGreen rounded-full hover:bg-TatoGreen text-TatoGreen hover:text-white transition duration-400 ease-in-out">
         View More
         <font-awesome-icon :icon="['fas', 'arrow-right']" />
       </RouterLink>
