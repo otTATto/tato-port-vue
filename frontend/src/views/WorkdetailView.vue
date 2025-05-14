@@ -1,6 +1,16 @@
 <template>
   <div class="my-5 px-5 lg:px-[10vw] 2xl:px-[20vw] 4xl:px-[30vw]">
 
+    <!-- 戻るボタン -->
+    <RouterLink :to="`/works#${slug}`">
+      <div class="bg-TatoGreen rounded-t -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] -mt-5 py-3">
+        <div class="text-center text-white">
+          <font-awesome-icon :icon="['fas', 'angle-left']" class="" />
+          作品一覧 に戻る
+        </div>
+      </div>
+    </RouterLink>
+
     <!-- タイトル -->
     <div class="my-5 font-bold md:text-center text-xl md:text-3xl">
       <h1>{{ title }}</h1>
@@ -33,7 +43,7 @@
       </div>
     </div>
     <!-- タグ（スマホ） -->
-    <div class="md:hidden text-gray-400 font-MaruGothic text-sm overflow-x-auto whitespace-nowrap mr-2 my-3">
+    <div class="md:hidden text-gray-400 font-MaruGothic text-sm overflow-x-auto whitespace-nowrap mr-2 mt-3">
       <span
         v-for="t in tags"
         :key="t"
@@ -43,18 +53,30 @@
       </span>
     </div>
 
-    <hr class="border-t border-1 border-TatoGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr class="border-t border-1 border-TatoGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] mt-6 mb-3" />
 
     <!-- 詳細  -->
-    <div>
+    <div class="my-10">
       <component :is="comp" />
     </div>
+
+    <!-- 戻るボタン -->
+    <RouterLink :to="`/works#${slug}`">
+      <div class="bg-TatoGreen rounded-b -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] -mb-5 py-3">
+        <div class="text-center text-white">
+          <font-awesome-icon :icon="['fas', 'angle-left']" class="" />
+          作品一覧 に戻る
+        </div>
+      </div>
+    </RouterLink>
     
   </div>
 </template>
 
 <script setup lang="ts">
-  import ToneungabpComp from '../components/works/ToneungabpComp.vue'
+  // @brief 各作品のコンポーネントをインポート
+  import ProjectasgComp from '../components/works/ProjectasgComp.vue';
+  import ToneungabpComp from '../components/works/ToneungabpComp.vue';
 
   defineOptions({
     name: 'WorkDetail',
@@ -77,18 +99,25 @@
   // @brief 作品ごとのデータ
   const worksData = [
     {
+      slug: 'project-asg',
+      title: 'プロジェクト課題',
+      types: ['Engineer'],
+      tags: ['HTML', 'CSS', 'JavaScript', 'Python', 'Bootstrap', 'Firebase', 'Flask', 'Git/GitHub'],
+      comp: ProjectasgComp,
+    },
+    {
       slug: 'toneunga-bp',
       title: '利根運河ブランドプロジェクト',
-      types: ['Engineer', 'Designer'],
-      tags: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+      types: ['Engineer', 'Design'],
+      tags: ['WordPress', 'Adobe Ilustrator'],
       comp: ToneungabpComp,
     },
   ]
 
-  let title = '';
-  let comp = null;
-  let types = [];
-  let tags = [];
+  let title: string = '';
+  let comp: any = null;
+  let types: string[] = [];
+  let tags: string[] = [];
 
   // @brief slug から title を取得
   for (const work of worksData) {
