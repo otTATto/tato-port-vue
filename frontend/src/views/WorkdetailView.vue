@@ -1,9 +1,9 @@
 <template>
-  <div class="my-5 px-5 lg:px-[10vw] 2xl:px-[20vw] 4xl:px-[30vw]">
+  <div class="my-5 px-5 lg:px-[20vw] 2xl:px-[30vw] 4xl:px-[40vw]">
 
     <!-- 戻るボタン -->
     <RouterLink :to="`/works#${slug}`">
-      <div class="bg-TatoGreen rounded-t -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] -mt-5 py-3">
+      <div class="bg-TatoGreen rounded-t -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] -mt-5 py-3">
         <div class="text-center text-white">
           <font-awesome-icon :icon="['fas', 'angle-left']" class="" />
           作品一覧 に戻る
@@ -53,7 +53,7 @@
       </span>
     </div>
 
-    <hr class="border-t border-1 border-TatoGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] mt-6 mb-3" />
+    <hr class="border-t border-1 border-TatoGreen -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] mt-6 mb-3" />
 
     <!-- 詳細  -->
     <div class="my-10">
@@ -62,7 +62,7 @@
 
     <!-- 戻るボタン -->
     <RouterLink :to="`/works#${slug}`">
-      <div class="bg-TatoGreen rounded-b -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] -mb-5 py-3">
+      <div class="bg-TatoGreen rounded-b -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] -mb-5 py-3">
         <div class="text-center text-white">
           <font-awesome-icon :icon="['fas', 'angle-left']" class="" />
           作品一覧 に戻る
