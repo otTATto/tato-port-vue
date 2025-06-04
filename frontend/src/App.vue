@@ -47,7 +47,7 @@
   // @brief '/' にアクセスしたときにローディング画面を表示する
   // @detail 3秒後にローディング画面を非表示にする
   onMounted(() => {
-    if (isHome) {
+    if (isHome.value) {
       setTimeout(() => {
         showLoading.value = false
       }, 3000)
