@@ -7,9 +7,11 @@
 <template>
   <div class="my-10">
     <!-- タイトル -->
-    <h3 :class="[
-      title.size === 'big' ? 'text-3xl' : 'text-2xl',
-    ]">
+    <h3 
+      :id="id"
+      :class="[
+        title.size === 'big' ? 'text-3xl' : 'text-2xl',
+      ]">
       <span :class="date.class">{{ date.text }}</span>
       {{ title.text }}
     </h3>
@@ -58,31 +60,33 @@
     <!-- 説明 -->
     <div class="text-gray-600 mt-2 mb-5 font-MaruGothic font-medium pl-[10vw] text-sm xl:text-base">
       {{ description }}
-      <!-- 詳細 -->
-      <!-- 
-        @brief 詳細リンクの表示
-        @detail detail.link が空でない場合に表示する
-        @detail detail.type が 'internal' の場合は RouterLink を使用
-        @detail detail.type が 'external' の場合は a タグを使用
-      -->
-      <span 
-        v-if="detail.link !== ''"
-        class="font-Gothic font-bold">
-        <RouterLink 
-          v-if="detail.type === 'internal'"
-          :to="detail.link" 
-          class="text-TatoLightGreen hover:text-red-400 transition duration-400 ease-in-out">
-          詳細はこちら
-        </RouterLink>
-        <a 
-          v-else-if="detail.type === 'external'"
-          :href="detail.link" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="text-TatoLightGreen hover:text-red-400 transition duration-400 ease-in-out">
-          詳細はこちら
-        </a>
-      </span>
+    </div>
+    <!-- 詳細  -->
+    <!-- 
+      @brief 詳細リンクの表示
+      @detail detail.link が空でない場合に表示する
+      @detail detail.type が 'internal' の場合は RouterLink を使用
+      @detail detail.type が 'external' の場合は a タグを使用
+    -->
+    <div
+      v-if="detail.link !== ''"
+      class="flex justify-end items-center">
+      <RouterLink 
+        v-if="detail.type === 'internal'"
+        :to="detail.link" 
+        class="font-extrabold mx-1 pl-3 pr-3 py-1 border-2 border-TatoGreen rounded-full hover:bg-TatoGreen text-TatoGreen hover:text-white transition duration-400 ease-in-out">
+        View More
+        <font-awesome-icon :icon="['fas', 'arrow-right']" />
+      </RouterLink>
+      <a 
+        v-else-if="detail.type === 'external'"
+        :href="detail.link" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="font-extrabold mx-1 pl-3 pr-3 py-1 border-2 border-TatoGreen rounded-full hover:bg-TatoGreen text-TatoGreen hover:text-white transition duration-400 ease-in-out">
+        <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']" class="mr-1" />
+        View More
+      </a>
     </div>
   </div>
 </template>
@@ -94,6 +98,7 @@
 
   // パラメータの型定義
   interface Props {
+    id?: string,
     date: { text: string, class: string },
     title: { text: string, size: string },
     image?: string,

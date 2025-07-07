@@ -6,7 +6,7 @@ import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faGithub, faXTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { faAngleUp, faAngleLeft, faArrowRight, faArrowUpRightFromSquare, faArrowTurnDown } from '@fortawesome/free-solid-svg-icons'
 
 // import: Custom directives
 import { preventImageActions } from './directives/preventImageActions';
@@ -15,6 +15,10 @@ import { preventImageActions } from './directives/preventImageActions';
 library.add(faGithub)
 library.add(faXTwitter)
 library.add(faAngleUp)
+library.add(faAngleLeft)
+library.add(faArrowRight)
+library.add(faArrowUpRightFromSquare)
+library.add(faArrowTurnDown)
 
 // create: Vue app
 const app = createApp(App)
