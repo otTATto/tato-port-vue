@@ -3,8 +3,8 @@
 
     <!-- 戻るボタン -->
     <RouterLink :to="`/works#${slug}`">
-      <div class="bg-TatoGreen rounded-t -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] -mt-5 py-3">
-        <div class="text-center text-white">
+      <div class="text-TatoGreen hover:text-white hover:bg-TatoGreen duration-400 ease-in-out rounded-t -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] -mt-5 py-3">
+        <div class="text-center">
           <font-awesome-icon :icon="['fas', 'angle-left']" class="" />
           作品一覧 に戻る
         </div>
@@ -62,8 +62,8 @@
 
     <!-- 戻るボタン -->
     <RouterLink :to="`/works#${slug}`">
-      <div class="bg-TatoGreen rounded-b -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] -mb-5 py-3">
-        <div class="text-center text-white">
+      <div class="text-TatoGreen hover:text-white hover:bg-TatoGreen duration-400 ease-in-out rounded-b -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] -mb-5 py-3">
+        <div class="text-center">
           <font-awesome-icon :icon="['fas', 'angle-left']" class="" />
           作品一覧 に戻る
         </div>
