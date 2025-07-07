@@ -2,14 +2,14 @@
   <div class="my-5 px-5 lg:px-[20vw] 2xl:px-[30vw] 4xl:px-[40vw]">
 
     <!-- 戻るボタン -->
-    <RouterLink :to="`/works#${slug}`">
+    <a href="#" @click.prevent="goBack">
       <div class="text-TatoGreen hover:text-white hover:bg-TatoGreen duration-400 ease-in-out rounded-t -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] -mt-5 py-3">
         <div class="text-center">
           <font-awesome-icon :icon="['fas', 'angle-left']" class="" />
           作品一覧 に戻る
         </div>
       </div>
-    </RouterLink>
+    </a>
 
     <!-- タイトル -->
     <div class="my-5 font-bold md:text-center text-xl md:text-3xl">
@@ -61,14 +61,14 @@
     </div>
 
     <!-- 戻るボタン -->
-    <RouterLink :to="`/works#${slug}`">
+    <a href="#" @click.prevent="goBack">
       <div class="text-TatoGreen hover:text-white hover:bg-TatoGreen duration-400 ease-in-out rounded-b -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] -mb-5 py-3">
         <div class="text-center">
           <font-awesome-icon :icon="['fas', 'angle-left']" class="" />
           作品一覧 に戻る
         </div>
       </div>
-    </RouterLink>
+    </a>
     
   </div>
 </template>
@@ -89,12 +89,17 @@
   }
   const props = defineProps<Props>()
 
-  // @brief ルートを取得
-  import { useRoute } from 'vue-router'
-  const route = useRoute()
+  // @brief ルート, ルーターを取得
+  import { useRoute, useRouter } from 'vue-router'
+  const route = useRoute();
+  const router = useRouter();
   // @brief ルートのパラメータを取得
   const slug = route.params.slug as string
   console.log('slug:', slug)
+  // @brief Vue Router の履歴を 1 つ戻る
+  const goBack = () => {
+    router.go(-1);
+  }
 
   // @brief 作品ごとのデータ
   const worksData = [
