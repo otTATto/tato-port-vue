@@ -37,6 +37,7 @@
     <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
+      :id="'toneunga-bp'"
       :date="{ 
         text: '✅ 現在',
         class: 'text-green-500'
@@ -56,8 +57,8 @@
       ]"
       description="東京理科大学 野田キャンパスの近くにある「利根運河」の魅力を発信するためのプロジェクトに、主にデザイナーとして携わりました。利根運河をモチーフにデザインした商品を、地域のイベントや大学の学会などで販売しています。"
       :detail="{
-        type: 'external',
-        link: 'https://224.works/'
+        type: 'internal',
+        link: '/works/toneunga-bp/'
       }"
     />
 
@@ -120,6 +121,7 @@
     <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
+      :id="'project-asg'"
       :date="{ 
         text: '🏆 2023.12',
         class: 'text-gray-400'
@@ -137,15 +139,15 @@
         'CSS',
         'JavaScript',
         'Python',
-        'BootStrap',
+        'Bootstrap',
         'Firebase',
         'Flask',
         'Git/GitHub'
       ]"
       description="学部 3 年で実施される「プロジェクト課題」というハッカソンのような授業において、チームでオンライン試験におけるカンニング検知システム「試験防衛壁」を開発し、最優秀賞をいただきました。"
       :detail="{
-        type: '',
-        link: ''
+        type: 'internal',
+        link: '/works/project-asg/'
       }"
     />
 
