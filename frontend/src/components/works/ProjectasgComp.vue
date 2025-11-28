@@ -28,7 +28,7 @@
       "
     />
 
-   <TitleComp
+    <TitleComp
       :index="3"
       content="開発の過程"
     />

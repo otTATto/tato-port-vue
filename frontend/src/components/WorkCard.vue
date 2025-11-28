@@ -85,7 +85,7 @@
         rel="noopener noreferrer"
         class="font-extrabold mx-1 pl-3 pr-3 py-1 border-2 border-TatoGreen rounded-full hover:bg-TatoGreen text-TatoGreen hover:text-white transition duration-400 ease-in-out">
         <font-awesome-icon :icon="['fas', 'arrow-up-right-from-square']" class="mr-1" />
-        View More
+        {{ detail.label || 'View More' }}
       </a>
     </div>
   </div>
@@ -105,7 +105,7 @@
     types: string[],
     tags?: string[],
     description?: string,
-    detail: { type: string, link: string }
+    detail: { type: string, link: string, label?: string }
   }
   const props = defineProps<Props>()
 </script>

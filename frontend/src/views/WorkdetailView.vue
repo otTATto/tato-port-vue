@@ -96,8 +96,12 @@
 <script setup lang="ts">
   // @brief 各作品のコンポーネントをインポート
   import { icon } from '@fortawesome/fontawesome-svg-core';
-import ProjectasgComp from '../components/works/ProjectasgComp.vue';
+  import AistComp from '@/components/works/AistComp.vue';
   import ToneungabpComp from '../components/works/ToneungabpComp.vue';
+  import InternshiplyComp from '@/components/works/InternshiplyComp.vue';
+  import ProjectasgComp from '../components/works/ProjectasgComp.vue';
+  import IdolComp from '@/components/works/IdolComp.vue';
+  import MizbeComp from '@/components/works/MizbeComp.vue';
 
   defineOptions({
     name: 'WorkDetail',
@@ -125,19 +129,82 @@ import ProjectasgComp from '../components/works/ProjectasgComp.vue';
   // @brief 作品ごとのデータ
   const worksData = [
     {
-      slug: 'project-asg',
-      title: 'プロジェクト課題',
-      types: ['Engineer'],
-      tags: ['HTML', 'CSS', 'JavaScript', 'Python', 'Bootstrap', 'Firebase', 'Flask', 'Git/GitHub'],
-      date: '2023.12.20',
-      comp: ProjectasgComp,
+      slug: 'aist',
+      title: '重度運動機能障害者 支援システム 研究開発 ＠産総研',
+      types: ['Engineer', 'Study'],
+      tags: [
+        '画像処理', 
+        'C++', 
+        'Python', 
+        'OpenCV', 
+        'Git/GitHub'
+      ],
+      date: '現在',
+      comp: AistComp,
     },
     {
       slug: 'toneunga-bp',
       title: '利根運河ブランドプロジェクト',
       types: ['Engineer', 'Design'],
-      tags: ['WordPress', 'Adobe Ilustrator'],
+      tags: [
+        'WordPress', 
+        'Adobe Ilustrator'
+      ],
+      date: '現在',
       comp: ToneungabpComp,
+    },
+    {
+      slug: 'internship-ly',
+      title: 'LINEヤフー株式会社 サマーインターン 参加',
+      types: ['Engineer'],
+      tags: [
+        'TypeScript',
+        'Vue.js',
+        'SCSS',
+        'Figma',
+        'Git/GitHub',
+        'Confluence/Jira',
+      ],
+      date: '2025.08.25 - 2025.10.03',
+      comp: InternshiplyComp,
+    },
+    {
+      slug: 'project-asg',
+      title: 'プロジェクト課題',
+      types: ['Engineer'],
+      tags: [
+        'HTML', 
+        'CSS', 
+        'JavaScript', 
+        'Python', 
+        'Bootstrap', 
+        'Firebase', 
+        'Flask', 
+        'Git/GitHub'
+      ],
+      date: '2023.12.20',
+      comp: ProjectasgComp,
+    },
+    {
+      slug: 'idol',
+      title: '理科大学生アイドルグループ ロゴ制作',
+      types: ['Design'],
+      tags: [
+        'Adobe Photoshop', 
+        'Adobe Illustrator',
+      ],
+      date: '2023.10.31',
+      comp: IdolComp,
+    },
+    {
+      slug: 'mizbe',
+      title: '水辺で乾杯ポスター制作',
+      types: ['Design'],
+      tags: [
+        'Adobe Illustrator',
+      ],
+      date: '2023-2025.06',
+      comp: MizbeComp,
     },
   ]
 
