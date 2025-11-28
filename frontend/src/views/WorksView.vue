@@ -61,7 +61,7 @@
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="toneunga-bp" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
       :date="{ 
@@ -178,7 +178,7 @@
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="idol" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
       :date="{ 
@@ -204,7 +204,7 @@
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="mizbe" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
       :date="{ 
@@ -267,7 +267,7 @@
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="chal7777" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
       :date="{ 
@@ -348,7 +348,7 @@
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="font-guessr" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
       :date="{ 
