@@ -18,22 +18,25 @@
         <div class="mask-x-from-75% mask-x-to-95% scroll-infinity__wrap gallery-row">
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
@@ -47,22 +50,25 @@
         <div class="mask-x-from-75% mask-x-to-95% scroll-infinity__wrap gallery-row">
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
@@ -88,22 +94,25 @@
         <div class="scroll-infinity__wrap gallery-row">
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--right">
             <li v-for="(img, i) in topImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
@@ -117,22 +126,25 @@
         <div class="scroll-infinity__wrap gallery-row">
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
           <ul class="scroll-infinity__list scroll-infinity__list--left">
             <li v-for="(img, i) in bottomImages" :key="`top-${i}`" class="scroll-infinity__item mx-2">
-              <img :src="img" alt="Gallery Image"
-                class="rounded-lg" v-prevent-image-actions
+              <img :src="img.src" alt="Gallery Image"
+                class="rounded-lg cursor-pointer" v-prevent-image-actions
+                @click="router.push(`/works/#${img.id}`)"
               />
             </li>
           </ul>
@@ -146,6 +158,9 @@
 
 <script setup lang="ts">
   import { ref, onMounted } from 'vue'
+  import { useRouter } from 'vue-router'
+
+  const router = useRouter();
 
   // @brief ギャラリー画像のインポート
   import topImage1 from '@/img/gallery/top/image1.webp'
@@ -153,14 +168,48 @@
   import topImage3 from '@/img/gallery/top/image3.webp'
   import topImage4 from '@/img/gallery/top/image4.webp'
 
-  const topImages = [topImage1, topImage2, topImage3, topImage4]
+  const topImages = [
+    {
+      src: topImage1, 
+      id: 'idol',
+    },
+    {
+      src: topImage2, 
+      id: 'toneunga-bp',
+    },
+    {
+      src: topImage3, 
+      id: 'chal7777',
+    },
+    {
+      src: topImage4, 
+      id: 'mizbe',
+    },
+  ]
 
   import bottomImage1 from '@/img/gallery/bottom/image1.webp'
   import bottomImage2 from '@/img/gallery/bottom/image2.webp'
   import bottomImage3 from '@/img/gallery/bottom/image3.webp'
   import bottomImage4 from '@/img/gallery/bottom/image4.webp'
 
-  const bottomImages = [bottomImage1, bottomImage2, bottomImage3, bottomImage4]
+  const bottomImages = [
+    {
+      src: bottomImage1, 
+      id: 'toneunga-bp',
+    },
+    {
+      src: bottomImage2, 
+      id: 'toneunga-bp',
+    },
+    {
+      src: bottomImage3, 
+      id: 'font-guessr',
+    },
+    {
+      src: bottomImage4, 
+      id: 'project-asg',
+    },
+  ]
 
   // === ここから: WebKit ベース向けの処理 ===
 

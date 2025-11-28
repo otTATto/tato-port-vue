@@ -11,46 +11,66 @@
       </div>
     </a>
 
-    <!-- タイトル -->
-    <div class="my-5 font-bold md:text-center text-xl md:text-3xl">
-      <h1>{{ title }}</h1>
-    </div>
+    <div class="space-y-3">
 
-    <!-- タイプとタグ -->
-    <div class="flex justify-start md:justify-center items-center mt-3">
-      <!-- タイプ -->
-      <div class="text-gray-400 text-sm md:text-base">
-        <span
-          v-for="(type, index) in types"
-          :key="index"
-          :class="[`text-${type} font-medium border-2 border-${type} bg-${type}Light rounded-full px-2`, types.length > 1 && index < types.length - 1 ? 'mr-1' : '']"
-        >
-          {{ type }}
-        </span>
+      <!-- タイトル -->
+      <div class="my-5 font-bold md:text-center text-xl md:text-3xl">
+        <h1>{{ title }}</h1>
       </div>
-      <span class="text-gray-300 font-MaruGothic mx-2"> 
-          / 
-      </span>
-      <!-- タグ（PC） -->
-      <div class="hidden md:block text-gray-400 font-MaruGothic text-sm mr-2 ">
+
+      <!-- タイプとタグ -->
+      <div class="flex justify-start md:justify-center items-center">
+        <!-- タイプ -->
+        <div class="text-gray-400 text-sm md:text-base">
+          <span
+            v-for="(type, index) in types"
+            :key="index"
+            :class="[`text-${type} font-medium border-2 border-${type} bg-${type}Light rounded-full px-2`, types.length > 1 && index < types.length - 1 ? 'mr-1' : '']"
+          >
+            {{ type }}
+          </span>
+        </div>
+        <span class="text-gray-300 font-MaruGothic mx-2"> 
+            / 
+        </span>
+        <!-- タグ（PC） -->
+        <div class="hidden md:block text-gray-400 font-MaruGothic text-sm mr-2 ">
+          <span
+            v-for="t in tags"
+            :key="t"
+            :class="`text-${t} border-2 border-gray-400 rounded-full px-2 mx-0.5`"
+          >
+            {{ t }}
+          </span>
+        </div>
+      </div>
+      <!-- タグ（スマホ） -->
+      <div class="md:hidden text-gray-400 font-MaruGothic text-sm overflow-x-auto whitespace-nowrap mr-2">
         <span
           v-for="t in tags"
           :key="t"
-          :class="`text-${t} border-2 border-gray-400 rounded-full px-2 mx-0.5`"
+          :class="`text-${t} border-2 border-gray-400 rounded-full px-2 mx-0.5 inline-block`"
         >
           {{ t }}
         </span>
       </div>
-    </div>
-    <!-- タグ（スマホ） -->
-    <div class="md:hidden text-gray-400 font-MaruGothic text-sm overflow-x-auto whitespace-nowrap mr-2 mt-3">
-      <span
-        v-for="t in tags"
-        :key="t"
-        :class="`text-${t} border-2 border-gray-400 rounded-full px-2 mx-0.5 inline-block`"
+
+      <!-- 日付 -->
+      <div
+        v-if="date"
+        class="
+          font-MaruGothic
+          text-gray-400
+          space-x-2
+          flex items-center justify-end"
       >
-        {{ t }}
-      </span>
+        <font-awesome-icon 
+          :icon="['fas', 'calendar-days']" 
+          class="text-sm"
+        />
+        <div>{{ date }}</div>
+      </div>
+
     </div>
 
     <hr class="border-t border-1 border-TatoGreen -mx-5 lg:-mx-[20vw] 2xl:-mx-[30vw] mt-6 mb-3" />
@@ -75,8 +95,13 @@
 
 <script setup lang="ts">
   // @brief 各作品のコンポーネントをインポート
-  import ProjectasgComp from '../components/works/ProjectasgComp.vue';
+  import { icon } from '@fortawesome/fontawesome-svg-core';
+  import AistComp from '@/components/works/AistComp.vue';
   import ToneungabpComp from '../components/works/ToneungabpComp.vue';
+  import InternshiplyComp from '@/components/works/InternshiplyComp.vue';
+  import ProjectasgComp from '../components/works/ProjectasgComp.vue';
+  import IdolComp from '@/components/works/IdolComp.vue';
+  import MizbeComp from '@/components/works/MizbeComp.vue';
 
   defineOptions({
     name: 'WorkDetail',
@@ -104,22 +129,87 @@
   // @brief 作品ごとのデータ
   const worksData = [
     {
-      slug: 'project-asg',
-      title: 'プロジェクト課題',
-      types: ['Engineer'],
-      tags: ['HTML', 'CSS', 'JavaScript', 'Python', 'Bootstrap', 'Firebase', 'Flask', 'Git/GitHub'],
-      comp: ProjectasgComp,
+      slug: 'aist',
+      title: '重度運動機能障害者 支援システム 研究開発 ＠産総研',
+      types: ['Engineer', 'Study'],
+      tags: [
+        '画像処理', 
+        'C++', 
+        'Python', 
+        'OpenCV', 
+        'Git/GitHub'
+      ],
+      date: '現在',
+      comp: AistComp,
     },
     {
       slug: 'toneunga-bp',
       title: '利根運河ブランドプロジェクト',
       types: ['Engineer', 'Design'],
-      tags: ['WordPress', 'Adobe Ilustrator'],
+      tags: [
+        'WordPress', 
+        'Adobe Ilustrator'
+      ],
+      date: '現在',
       comp: ToneungabpComp,
+    },
+    {
+      slug: 'internship-ly',
+      title: 'LINEヤフー株式会社 サマーインターン 参加',
+      types: ['Engineer'],
+      tags: [
+        'TypeScript',
+        'Vue.js',
+        'SCSS',
+        'Figma',
+        'Git/GitHub',
+        'Confluence/Jira',
+      ],
+      date: '2025.08.25 - 2025.10.03',
+      comp: InternshiplyComp,
+    },
+    {
+      slug: 'project-asg',
+      title: 'プロジェクト課題',
+      types: ['Engineer'],
+      tags: [
+        'HTML', 
+        'CSS', 
+        'JavaScript', 
+        'Python', 
+        'Bootstrap', 
+        'Firebase', 
+        'Flask', 
+        'Git/GitHub'
+      ],
+      date: '2023.12.20',
+      comp: ProjectasgComp,
+    },
+    {
+      slug: 'idol',
+      title: '理科大学生アイドルグループ ロゴ制作',
+      types: ['Design'],
+      tags: [
+        'Adobe Photoshop', 
+        'Adobe Illustrator',
+      ],
+      date: '2023.10.31',
+      comp: IdolComp,
+    },
+    {
+      slug: 'mizbe',
+      title: '水辺で乾杯ポスター制作',
+      types: ['Design'],
+      tags: [
+        'Adobe Illustrator',
+      ],
+      date: '2023-2025.06',
+      comp: MizbeComp,
     },
   ]
 
   let title: string = '';
+  let date: string | null = null;
   let comp: any = null;
   let types: string[] = [];
   let tags: string[] = [];
@@ -128,6 +218,7 @@
   for (const work of worksData) {
     if (work.slug === slug) {
       title = work.title;
+      date = work.date || null;
       comp = work.comp;
       types = work.types;
       tags = work.tags;

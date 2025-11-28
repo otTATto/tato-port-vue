@@ -29,15 +29,14 @@
       ]"
       description="国立研究開発法人 産業技術総合研究所 人間情報インタラクション研究部門 依田研究室のもとで、重度運動機能障害者の支援システムの研究開発を行っています。システム面では、Visual Studio 上での C++ による Windows アプリケーション開発がメインです。"
       :detail="{
-        type: 'external',
-        link: 'http://gesture-interface.jp/'
+        type: 'internal',
+        link: '/works/aist/'
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="toneunga-bp" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
-      :id="'toneunga-bp'"
       :date="{ 
         text: '✅ 現在',
         class: 'text-green-500'
@@ -59,6 +58,35 @@
       :detail="{
         type: 'internal',
         link: '/works/toneunga-bp/'
+      }"
+    />
+
+    <hr id="toneunga-bp" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+
+    <WorkCard 
+      :date="{ 
+        text: '💻 2025.08',
+        class: 'text-gray-400'
+      }"
+      :title="{
+        size: 'big',
+        text: 'LINEヤフー株式会社 サマーインターン 参加'
+      }"
+      :types="[
+        'Engineer'
+      ]"
+      :tags="[
+        'TypeScript',
+        'Vue.js',
+        'SCSS',
+        'Figma',
+        'Git/GitHub',
+        'Confluence/Jira',
+      ]"
+      description="LINEヤフー株式会社にて 6 週間のサマーインターンシップに参加し、LINEギフトにおけるフロントエンド開発業務に従事しました。"
+      :detail="{
+        type: 'internal',
+        link: '/works/internship-ly'
       }"
     />
 
@@ -118,10 +146,9 @@
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="project-asg" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
-      :id="'project-asg'"
       :date="{ 
         text: '🏆 2023.12',
         class: 'text-gray-400'
@@ -151,7 +178,7 @@
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="idol" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
       :date="{ 
@@ -172,16 +199,16 @@
       ]"
       description="現役理科大生のみから構成されるアイドルグループ「放課後スターライト」のロゴデザインを制作しました。"
       :detail="{
-        type: 'external',
-        link: 'https://idol.co.jp/'
+        type: 'internal',
+        link: '/works/idol/'
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="mizbe" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
       :date="{ 
-        text: '🎨 2023.06, 2024.06',
+        text: '🎨 2023-2025.06',
         class: 'text-gray-400'
       }"
       :title="{
@@ -195,10 +222,10 @@
       :tags="[
         'Adobe Illustrator'
       ]"
-      description="利根運河沿いにある「運河水辺公園」で開催される「水辺で乾杯！利根運河」というイベントのロゴデザインおよびポスターを、2 年連続で制作しました。"
+      description="利根運河沿いにある「運河水辺公園」で開催される「水辺で乾杯！利根運河」というイベントのロゴデザインおよびポスターを、3 年連続で制作しました。"
       :detail="{
-        type: 'external',
-        link: 'https://lp.224.works/mizbering/'
+        type: 'internal',
+        link: '/works/mizbe/'
       }"
     />
 
@@ -240,7 +267,7 @@
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="chal7777" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
       :date="{ 
@@ -265,7 +292,8 @@
       description="途中で数字が見えなくなるカウントダウンゲーム「7.777 秒チャレンジ」を制作しました。地域のイベントでの出店時に、多くの子供たちに遊んでもらいました。"
       :detail="{
         type: 'external',
-        link: 'https://chal7777.web.app/'
+        link: 'https://chal7777.web.app/',
+        label: 'Play',
       }"
     />
 
@@ -320,7 +348,7 @@
       }"
     />
 
-    <hr class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
+    <hr id="font-guessr" class="border-t-3 border-dotted border-TatoLightGreen -mx-5 lg:-mx-[10vw] 2xl:-mx-[20vw] my-3" />
 
     <WorkCard 
       :date="{ 
@@ -345,7 +373,8 @@
       description="見た目だけでフォント名を言い当てられる特殊能力「絶対フォント感」の獲得を目指し、フォント名を当てるゲーム「FontGuessr」を制作しました。"
       :detail="{
         type: 'external',
-        link: 'https://fontguessr.web.app/'
+        link: 'https://fontguessr.web.app/',
+        label: 'Play',
       }"
     />
 
