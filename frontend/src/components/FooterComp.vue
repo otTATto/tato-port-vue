@@ -5,7 +5,7 @@
   <div>
     <div class="text-center font-MaruGothic font-extrabold text-neutral-400 my-5">
       <small>
-        © たと・2025
+        © たと・2025-2026
       </small>
     </div>
   </div>
