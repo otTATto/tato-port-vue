@@ -22,7 +22,7 @@
       所属
     </div>
     <div>
-      東京理科大学 創域理工学研究科 情報計算科学専攻 <br> 松澤研究室 修士1年
+      東京理科大学 創域理工学研究科 情報計算科学専攻 <br> 松澤研究室 修士2年
     </div>
     <div class="mt-5 xl:mt-10"></div>
     <div class="text-gray-400 text-sm xl:text-lg font-extrabold">
